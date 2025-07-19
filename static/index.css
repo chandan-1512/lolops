@@ -1,0 +1,132 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url(5335982.jpg);
+  background-color: rgb(215, 122, 122);
+  background-size: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background-image: url('emobg.webp');
+  background-color: rgb(43, 220, 226);
+  height: 50vh;
+  width: 30vw;
+  box-sizing: border-box;
+  border-radius: 20px;
+  box-shadow: 0 0 80px grey;
+  margin-top: 150px;
+
+  /* ✅ Smooth movement and shadow on hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-10px);  /* ✅ halka upar uth jaaye */
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);  /* ✅ thoda gehra shadow */
+}
+
+h1 {
+    margin-left: 60px;
+  padding: 40px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px;
+}
+
+/* .button {
+  padding: 10px;
+  margin-left: 30%;
+  margin-top: 20px;
+  background-color: cornflowerblue;
+  border: none;
+  border-radius: 10px;
+} */
+
+.output {
+  margin-top: 100px;
+}
+.joke-box {
+  background-color: white;
+  padding: 2px 1px;
+  margin-top: 40px;
+margin-left: 80px;
+margin-right: 60px;
+  border-radius: 50px;
+ box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  font-size: 1.1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+   background-color: rgba(255, 255, 255, 0.8); /* halka white bg */
+  padding: 10px;
+  margin-top: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* 🎨 new font */
+  font-size: 18px;
+  color: #333;
+  line-height: 1.0;
+  text-align: center;
+  min-height: 60px;
+  transition: all 0.3s ease-in-out;
+}
+.joke-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+.button{
+
+  background-color: #FFFFFF;
+  border: 1px solid #222222;
+  border-radius: 8px;
+    margin-left: 150px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  /* margin: 0; */
+  outline: none;
+  padding: 13px 23px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+}
+
+.button
+focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow .2s;
+}
+
+.button
+active {
+  background-color: #F7F7F7;
+  border-color: #000000;
+  transform: scale(.96);
+}
+
+.button
+disabled {
+  border-color: #DDDDDD;
+  color: #DDDDDD;
+  cursor: not-allowed;
+  opacity: 1;
+}
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
