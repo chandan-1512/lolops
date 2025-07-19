@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joke Generator</title>
-  <link rel="stylesheet" href="/index.css">  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LOLops</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>😆</text></svg>">
+
 </head>
 <body>
 
   <div class="container">
-    <h1>    /*   While(Bored)   */</h1>
+    <h1><code>|| While(Bored) ||</code></h1>
 
     <button class="button" onclick="getJoke()">Generate_Joke()</button>
 
+    <!-- Joke text -->
     <p id="joke-box" class="joke-box">Your joke will appear here...</p>
+
+    <!-- Copy button -->
+    <button class="button" onclick="copyJoke()">Copy Joke</button>
   </div>
 
   <script>
+    // Function to fetch joke from server
     async function getJoke() {
       try {
         const res = await fetch('/get-joke');
@@ -26,6 +33,16 @@
         console.error('Error fetching joke:', error);
         document.getElementById('joke-box').innerText = "Joke laane me dikkat ho gayi!";
       }
+    }
+
+    // Function to copy joke to clipboard
+    function copyJoke() {
+      const jokeText = document.getElementById("joke-box").innerText;
+      navigator.clipboard.writeText(jokeText).then(() => {
+        alert("✅ Joke copied to clipboard!");
+      }).catch(err => {
+        console.error("❌ Failed to copy: ", err);
+      });
     }
   </script>
 
