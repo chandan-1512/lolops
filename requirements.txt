@@ -41,7 +41,6 @@ pyparsing==3.2.3
 python-dateutil==2.9.0.post0
 PyYAML==6.0.2
 # Editable install with no version control (realesrgan==0.3.0)
--e c:\users\l\appdata\local\programs\python\python310\lib\site-packages
 requests==2.32.4
 scikit-image==0.25.2
 scipy==1.15.3
